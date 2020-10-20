@@ -21,11 +21,10 @@ public class RegistrationController {
         return "registration";
     }
 
-
     @PostMapping ("/registration")
     public String addUser(User user, Map<String, Object> model){
-        User byUserName = userRepository.findByUserName(user.getUserName());
-        if (byUserName != null){
+        User byUsername = userRepository.findByUsername(user.getUsername());
+        if (byUsername != null){
             model.put("message", "User exist!");
             return "registration";
         }

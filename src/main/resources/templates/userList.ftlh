@@ -12,7 +12,7 @@
         <tbody>
         <#list users as user>
             <tr>
-                <td>${user.userName}</td>
+                <td>${user.username}</td>
                 <td><#list user.roles as role>${role}
                         <sep>, </#list></td>
                 <td><a href="/user/${user.id}">Edit</a></td>
