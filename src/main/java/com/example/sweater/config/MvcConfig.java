@@ -17,11 +17,6 @@ public class MvcConfig implements WebMvcConfigurer {
     private String uploadPath;
 
     @Bean
-    public PasswordEncoder getPasswordEncoder() {
-        return new BCryptPasswordEncoder(8);
-    }
-
-    @Bean
     public RestTemplate getRestTemplate(){
         return new RestTemplate();
     }
